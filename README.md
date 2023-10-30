@@ -1,10 +1,8 @@
 ![Sitecore Blok logo](/public/blok-logo.svg "Sitecore Blok")
-# Sitecore Blok Next.js starter template
+# Sitecore Blok Examples
 This is a [Next.js](https://nextjs.org/) project bootstrapped with create-next-app, added with [Chakra UI](https://chakra-ui.com/) and [Sitecore Blok](https://blok.sitecore.com) setup.
 
-Use this template to start developing with Sitecore Blok with the Next.js 13 (pages router)
-
-[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/markvanaalst/blok-starter-next13-pages)
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/markvanaalst/blok-examples)
 
 
 ## Installation
