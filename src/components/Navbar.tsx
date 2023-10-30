@@ -45,7 +45,7 @@ const NavBar = () => {
                 Examples
               </Badge>
             </HStack>
-            <Stack direction={"row"} w="full" alignItems={"center"}>
+            <Stack direction={"row"} w="full" alignItems={"center"} px={4}>
               <Button size="sm" as={Link} variant="navigation" isActive={false} href="">
                 Link 1
               </Button>
