@@ -22,6 +22,7 @@ import {
   CardBody,
   SimpleGrid,
   CardHeader,
+  Center,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { Variants, motion } from "framer-motion";
@@ -70,6 +71,22 @@ export default function Home() {
         >
           <Container maxW="container.xl" py={["8", "12", "16"]}>
             <ArticleList cardVariant={""} />
+          </Container>
+        </Box>
+
+        <Box h="full" w="full" bg="chakra-bg">
+          <Container maxW="container.xl" py={["8", "12", "16"]}>
+            <Stack textAlign={'center'} px={60} py={10} lineHeight={10}>
+              <Heading>Explore our SaaS DXP</Heading>
+              <Text>Sitecore&rsquo;s SaaS-enabled, composable digital experience platform (DXP) allows you to choose which products you want to implement from search to purchase to post-sale marketing with solutions for Content, Experience, and Commerce.</Text>
+            </Stack>
+            <Stack>
+              <SimpleGrid gap="6" columns={3}>
+                <ExampleCard title="Content Cloud" description="World leading cloud-based solutions to manage your content from strategy to delivery" />
+                <ExampleCard title="Engagement Cloud" description="Unlock customer data to make every interaction smarter." />
+                <ExampleCard title="Commerce Cloud" description="Acquire and engage shoppers with omnichannel buying experiences that connect across touchpoints and moments." />
+              </SimpleGrid>
+            </Stack>
           </Container>
         </Box>
 
