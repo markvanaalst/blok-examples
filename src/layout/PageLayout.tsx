@@ -41,7 +41,7 @@ export default function PageLayout({ title, description, children }: PageProps) 
           {/* </MotionContainer> */}
         </Flex>
 
-        <Box p="4">
+        <Box p="4" bg={'neutral-fg'} textColor={'chakra-inverse-text'}>
             <Text>© Copyright 2023, Sitecore. All Rights Reserved</Text>
         </Box>
               
