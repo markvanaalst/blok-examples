@@ -1,63 +1,20 @@
-import Head from "next/head";
 import {
-  Image,
-  Button,
   Container,
   Stack,
-  Flex,
   Box,
-  ContainerProps,
-  ButtonGroup,
-  Link,
-  HStack,
   useColorMode,
-  Badge,
   Text,
-  Tooltip,
-  IconButton,
-  Icon,
   Heading,
-  useColorModeValue,
-  Card,
-  CardBody,
   SimpleGrid,
-  CardHeader,
-  Center,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { Variants, motion } from "framer-motion";
 import React from "react";
-import { mdiArrowRight } from "@mdi/js";
 import Hero from "@/components/Hero";
 import PageLayout from "@/layout/PageLayout";
 import { ArticleList } from "@/components/ArticleList";
 import { ExampleCard } from "@/components/ExampleCard";
 
-const variants: Variants = {
-  hidden: {
-    opacity: 0,
-    x: 0,
-    y: -40,
-    transition: { duration: 0.4, type: "easeOut" },
-  },
-  enter: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: { duration: 0.4, type: "easeOut" },
-  },
-  exit: {
-    opacity: 0,
-    x: -0,
-    y: 40,
-    transition: { duration: 0.4, type: "easeOut" },
-  },
-};
-const MotionContainer = motion<ContainerProps>(Container);
 
 export default function Home() {
-  const { colorMode, toggleColorMode } = useColorMode();
-
   return (
     <PageLayout>
       <Box h="full" w="full" bg="chakra-body-bg">
@@ -66,8 +23,6 @@ export default function Home() {
           layerStyle="section.main"
           width={"full"}
           bg="chakra-subtle-bg"
-          // fontSize="lg"
-          // h="full"
         >
           <Container maxW="container.xl" py={["8", "12", "16"]}>
             <ArticleList cardVariant={""} />

@@ -9,6 +9,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import PageLayout from '@/layout/PageLayout';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex as="main" height='calc(100vh)' background={'chakra-body-bg'} >
+      <PageLayout>
       <Flex w="full" alignItems='center'>
         <Container>
           <Image
@@ -42,18 +43,7 @@ export default function Home() {
           </Stack>
           </Container>
       </Flex>
-      <NextLink href="https://www.sitecore.com">
-        <Image
-          m="8"
-          h="10"
-          src="sitecore.svg"
-          alt="Sitecore logo"
-          position={'absolute'}
-          bottom={'0'}
-          right={'0'}
-          />
-        </NextLink>
-    </Flex>
+      </PageLayout>
     </>
   )
 }

@@ -34,37 +34,14 @@ import {
 import NextLink from "next/link";
 import { Variants, motion } from "framer-motion";
 import React from "react";
-import { mdiAccountMultipleOutline, mdiArchiveOutline, mdiChartBoxOutline, mdiLayersOutline, mdiArrowRight, mdiCogOutline, mdiFileOutline, mdiHomeVariantOutline, mdiCartOutline, mdiAccountMultiple, mdiPoll, mdiPlusCircleOutline } from "@mdi/js";
+import { mdiAccountMultipleOutline, mdiArchiveOutline, mdiChartBoxOutline, mdiLayersOutline, mdiCogOutline, mdiFileOutline, mdiHomeVariantOutline, mdiCartOutline, mdiAccountMultiple, mdiPoll, mdiPlusCircleOutline } from "@mdi/js";
 import Hero from "@/components/Hero";
 import PageLayout from "@/layout/PageLayout";
 import { ArticleList } from "@/components/ArticleList";
 import { ExampleCard } from "@/components/ExampleCard";
 
-const variants: Variants = {
-  hidden: {
-    opacity: 0,
-    x: 0,
-    y: -40,
-    transition: { duration: 0.4, type: "easeOut" },
-  },
-  enter: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: { duration: 0.4, type: "easeOut" },
-  },
-  exit: {
-    opacity: 0,
-    x: -0,
-    y: 40,
-    transition: { duration: 0.4, type: "easeOut" },
-  },
-};
-const MotionContainer = motion<ContainerProps>(Container);
 
 export default function Home() {
-  const { colorMode, toggleColorMode } = useColorMode();
-
   return (
     <PageLayout>
       <Flex flexGrow={1} as="main">
@@ -190,8 +167,6 @@ export default function Home() {
             </Card>
             </SimpleGrid>
           
-            
-
           </Box>
         
       </Flex>

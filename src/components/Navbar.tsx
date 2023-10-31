@@ -1,12 +1,9 @@
-import Head from "next/head";
 import {
   Image,
   Button,
-  Container,
   Stack,
   Flex,
   Box,
-  ContainerProps,
   ButtonGroup,
   Link,
   HStack,
@@ -17,11 +14,8 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { Variants, motion } from "framer-motion";
 import React from "react";
 import { mdiCircleHalfFull } from '@mdi/js'
-import Hero from "@/components/Hero";
 const NavBar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     
@@ -46,14 +40,14 @@ const NavBar = () => {
               </Badge>
             </HStack>
             <Stack direction={"row"} w="full" alignItems={"center"} px={4}>
-              <Button size="sm" as={Link} variant="navigation" isActive={false} href="">
-                Link 1
+              <Button size="sm" as={Link} variant="navigation" isActive={false} href="/landingpage">
+                Landingpage
               </Button>
-              <Button size="sm" as={Link} variant="navigation" isActive={false} href="">
-                Link 1
+              <Button size="sm" as={Link} variant="navigation" isActive={false} href="/dashboard">
+                Dashboard
               </Button>
-              <Button size="sm" as={Link} variant="navigation" isActive={false} href="">
-                Link 1
+              <Button size="sm" as={Link} variant="navigation" isActive={false} href="/chatbot">
+                Chatbot
               </Button>
             </Stack>
             <ButtonGroup size="sm" variant="ghost">
