@@ -30,11 +30,23 @@ import {
   StatHelpText,
   StatLabel,
   StatNumber,
+  Table,
+  TableContainer,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  CloseButton,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  InputRightElement,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { Variants, motion } from "framer-motion";
 import React from "react";
-import { mdiAccountMultipleOutline, mdiArchiveOutline, mdiChartBoxOutline, mdiLayersOutline, mdiCogOutline, mdiFileOutline, mdiHomeVariantOutline, mdiCartOutline, mdiAccountMultiple, mdiPoll, mdiPlusCircleOutline } from "@mdi/js";
+import { mdiAccountMultipleOutline, mdiArchiveOutline, mdiChartBoxOutline, mdiLayersOutline, mdiCogOutline, mdiFileOutline, mdiHomeVariantOutline, mdiCartOutline, mdiAccountMultiple, mdiPoll, mdiPlusCircleOutline, mdiDotsHorizontal, mdiPencilOutline, mdiChevronDown, mdiMagnify, mdiPlus } from "@mdi/js";
 import Hero from "@/components/Hero";
 import PageLayout from "@/layout/PageLayout";
 import { ArticleList } from "@/components/ArticleList";
@@ -85,11 +97,11 @@ export default function Home() {
               </Wrap>
           </Box>
 
-          <Box layerStyle="section.main">
+          <Flex layerStyle="section.main" gap={4} direction={'column'}>
             
             <Heading size='md'>Dashboard</Heading>
             
-            <SimpleGrid columns={[1, 1, 2, 3]} spacing="4" p="4">
+            <SimpleGrid columns={[1, 1, 2, 3]} spacing="4">
               <Card variant='outlineRaised'>
                 <CardHeader>
                   <Heading size='md'>Orders</Heading>
@@ -167,7 +179,150 @@ export default function Home() {
             </Card>
             </SimpleGrid>
           
-          </Box>
+            <Heading size='md'>More information</Heading>
+            <Stack>
+            <Wrap align="center">
+                <InputGroup maxW="2xs">
+                    <InputLeftElement pointerEvents="none">
+                      <Icon>
+                          <path d={mdiMagnify} />
+                      </Icon>
+                    </InputLeftElement>
+                    <Input placeholder="Search" value="some text here" />
+                    <InputRightElement>
+                        <Tooltip label="Clear">
+                            <CloseButton />
+                        </Tooltip>
+                    </InputRightElement>
+                </InputGroup>
+                <ButtonGroup as={Wrap} variant="filter">
+                    <Button isActive rightIcon={<CloseButton mr="-2" />}>
+                        Project:
+                        <Text ml="1" fontWeight="normal">
+                            Blok, Content Hub ONE, Explorer, +2
+                        </Text>
+                    </Button>
+                    <Button isActive rightIcon={<CloseButton mr="-2" />}>
+                        Type:
+                        <Text ml="1" fontWeight="normal">
+                            Task
+                        </Text>
+                    </Button>
+                    <Button
+                        rightIcon={
+                            <Icon layerStyle="menuButtonIcon">
+                                <path d={mdiChevronDown} />
+                            </Icon>
+                        }
+                    >
+                        Status
+                    </Button>
+                    <Button isActive rightIcon={<CloseButton mr="-2" />}>
+                        Assigned to me
+                    </Button>
+                    <Button
+                        rightIcon={
+                            <Icon>
+                                <path d={mdiPlus} />
+                            </Icon>
+                        }
+                    >
+                        More
+                    </Button>
+                    <Button variant="link" colorScheme="primary" px="2">
+                        Clear all
+                    </Button>
+                </ButtonGroup>
+            </Wrap>
+
+
+
+            <TableContainer as={Card} variant="flat" size="lg" whiteSpace="normal">
+        <Table>
+          <Thead>
+            <Tr>
+              <Th>Column one</Th>
+              <Th>Column three</Th>
+              <Th>Status</Th>
+              <Th></Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr>
+              <Td>Value</Td>
+              <Td>Value</Td>
+              <Td>
+                <Badge>New</Badge>
+              </Td>
+              <Td isNumeric>
+                <ButtonGroup variant="ghost" size="sm">
+                  <Tooltip label="Edit">
+                    <IconButton
+                      icon={<Icon><path d={mdiPencilOutline} /></Icon>}
+                      aria-label={"Edit"}
+                    />
+                  </Tooltip>
+                  <Tooltip label="More options">
+                    <IconButton
+                      icon={<Icon><path d={mdiDotsHorizontal} /></Icon>}
+                      aria-label={"More options"}
+                    />
+                  </Tooltip>
+                </ButtonGroup>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>Value</Td>
+              <Td>Value</Td>
+              <Td>
+                <Badge colorScheme="success">Done</Badge>
+              </Td>
+              <Td isNumeric>
+                <ButtonGroup variant="ghost" size="sm">
+                  <Tooltip label="Edit">
+                    <IconButton
+                      icon={<Icon><path d={mdiPencilOutline} /></Icon>}
+                      aria-label={"Edit"}
+                    />
+                  </Tooltip>
+                  <Tooltip label="More options">
+                    <IconButton
+                      icon={<Icon><path d={mdiDotsHorizontal} /></Icon>}
+                      aria-label={"More options"}
+                    />
+                  </Tooltip>
+                </ButtonGroup>
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>Value</Td>
+              <Td>Value</Td>
+              <Td>
+                <Badge colorScheme="danger">Failed</Badge>
+              </Td>
+              <Td isNumeric>
+                <ButtonGroup variant="ghost" size="sm">
+                  <Tooltip label="Edit">
+                    <IconButton
+                      icon={<Icon><path d={mdiPencilOutline} /></Icon>}
+                      aria-label={"Edit"}
+                    />
+                  </Tooltip>
+                  <Tooltip label="More options">
+                    <IconButton
+                      icon={<Icon><path d={mdiDotsHorizontal} /></Icon>}
+                      aria-label={"More options"}
+                    />
+                  </Tooltip>
+                </ButtonGroup>
+              </Td>
+            </Tr>
+          </Tbody>
+        </Table>
+      </TableContainer>
+      </Stack>
+
+          </Flex>
         
       </Flex>
     </PageLayout>
