@@ -29,16 +29,8 @@ export default function PageLayout({ title, description, children }: PageProps) 
       </Head>
       <Flex flexFlow="column nowrap" minH={"100vh"}>
         <NavBar />
-        <Flex flexGrow={1} as="main">
-          {/* <MotionContainer
-            display="flex"
-            maxW="full"
-            minH={{ base: "auto", md: "100%" }}
-            flexGrow={1}
-            overflow="hidden"
-          > */}
-            {children}
-          {/* </MotionContainer> */}
+        <Flex flexGrow={1}>
+          {children}
         </Flex>
 
         <Box p="4" bg={'neutral-fg'} textColor={'chakra-inverse-text'}>
