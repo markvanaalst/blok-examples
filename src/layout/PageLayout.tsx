@@ -9,14 +9,13 @@ Box,
 import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
 import NavBar from "@/components/Navbar";
+import navData from '../../data/navbar.json';
 
 type PageProps = {
   title?: string;
   description?: string;
   children: ReactNode;
 };
-
-const MotionContainer = motion<ContainerProps>(Container);
 
 export default function PageLayout({ title, description, children }: PageProps) {
   return (
@@ -28,7 +27,7 @@ export default function PageLayout({ title, description, children }: PageProps) 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex flexFlow="column nowrap" minH={"100vh"}>
-        <NavBar />
+        <NavBar navigationData={navData} zIndex={"sticky"} position="sticky" top="0" />
         <Flex flexGrow={1}>
           {children}
         </Flex>

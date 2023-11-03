@@ -1,0 +1,58 @@
+{
+  "title": "Menu Title",
+  "logo": {
+    "light": "https://sitecorecontenthub.stylelabs.cloud/api/public/content/37768281ce944bafb141bc1d4741fae1",
+    "dark": "https://sitecorecontenthub.stylelabs.cloud/api/public/content/507bd1b6eaa04385b07cfe44a424e053"
+  },
+  "badge": "Examples",
+  "menuItems": [
+    {
+      "title": "Menu Option 1",
+      "path": "menu-option-1"
+    },
+    {
+      "title": "Menu Option 2",
+      "path": "menu-option-2"
+    },
+    {
+      "title": "Menu Option 3",
+      "path": "menu-option-3",
+      "children": [
+        {
+          "title": "Sub Menu Option 3-1",
+          "path": "sub-menu-option-3-1"
+        },
+        {
+          "title": "Sub Menu Option 3-2",
+          "path": "sub-menu-option-3-2",
+          "children": [
+            {
+              "title": "Sub Menu Option 3-1",
+              "path": "sub-menu-option-3-1"
+            },
+            {
+              "title": "Sub Menu Option 3-2",
+              "path": "sub-menu-option-3-2"
+            }
+          ]
+        },
+        {
+          "title": "Sub Menu Option 3-3",
+          "path": "sub-menu-option-3-3"
+        }
+      ]
+    },
+    {
+      "title": "Menu Option 4",
+      "path": "menu-option-4"
+    },
+    {
+      "title": "Menu Option 5",
+      "path": "menu-option-5"
+    },
+    {
+      "title": "Menu Option 6",
+      "path": "menu-option-6"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Sitecore Blok",
+  "logo": {
+    "light": "https://sitecorecontenthub.stylelabs.cloud/api/public/content/37768281ce944bafb141bc1d4741fae1",
+    "dark": "https://sitecorecontenthub.stylelabs.cloud/api/public/content/507bd1b6eaa04385b07cfe44a424e053"
+  },
+  "badge": "Examples",
+  "menuItems": [
+    {
+      "title": "Landingpage",
+      "path": "landingpage"
+    },
+    {
+      "title": "Dashboard",
+      "path": "dashboard"
+    },
+    {
+      "title": "Chatbot",
+      "path": "chatbot"
+    },
+    { 
+      "title": "Navigation",
+      "path": "navigation",
+      "children": [
+        {
+          "title": "Primary Navigation",
+          "path": "navbar"
+        },
+        {
+          "title": "Sidebar",
+          "path": "sidebar"
+        }
+      ]
+    }
+  ]
+}
