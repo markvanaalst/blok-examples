@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import PageLayout from '@/layout/PageLayout';
+import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
@@ -21,28 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-      <Flex w="full" alignItems='center'>
-        <Container>
-          <Image
-            mb="8"
-            h="24"
-            src="blok-logo.svg"
-            alt="Sitecore Blok logo"
-          />
-          <Stack spacing="6" align="start">
-            <Heading as="h1" size="xl">
-              Build better products faster
-            </Heading>
-            <Text variant="subtle" maxW="prose">
-              Blok is <NextLink href="https://www.sitecore.com">Sitecore’s</NextLink> product design system: the UI framework and style guide we use to build great apps.
-              It’s publicly available, so that anyone can easily build software in the Sitecore design language.
-            </Text>
-            <Button as={NextLink} href="https://blok.sitecore.com/get-started">
-              Get started
-            </Button>
-          </Stack>
-          </Container>
-      </Flex>
+        <Hero />
       </PageLayout>
     </>
   )
