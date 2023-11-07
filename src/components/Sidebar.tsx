@@ -65,7 +65,7 @@ function RenderMenuItems(link: SidebarNavigationItem, currentBasePath: string): 
         return (
           <React.Fragment key={i}>
             {!child.children ? (
-              <Tooltip label={child.title} aria-label="A tooltip">
+              <Tooltip label={child.title} aria-label={child.title}>
                 <Button as={NextLink} href={childUrl} key={i} isActive={router.asPath == childUrl}>
                   <Text maxW={190} isTruncated px={2}>
                     {child.title}
@@ -95,6 +95,7 @@ function RenderDropdown(i: number, child: SidebarNavigationItem, basePath: strin
           justifyContent={'space-between'}
           width={'full'}
           transition={'ease-in-out'}
+          isActive={isOpen}
         >
           {child.path ? (
             <Text as={NextLink} href={basePath} maxW={190} isTruncated px={2}>
