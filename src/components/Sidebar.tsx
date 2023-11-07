@@ -41,7 +41,7 @@ const SidebarNavigation = ({ navigationData }: SidebarNavigationProps) => {
         {navigationData?.routes.map((link, i) => {
           return (
             <Wrap key={i}>
-              <Heading variant="section" px={2.5} fontWeight={'bold'}>
+              <Heading variant="section" px={2.5}>
                 {link.title}
               </Heading>
               <ButtonGroup variant="navigation" orientation="vertical" spacing="1" mx={-2} width={'full'}>
