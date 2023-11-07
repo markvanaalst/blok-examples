@@ -5,7 +5,7 @@
     "path": "/sidebar",
     "routes": [
       {
-        "title": "Section 1",
+        "title": "Section Title",
         "path": "section-1",
         "children": [
           {
